@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1crqhg5uq52s"]
+
+[ext_resource type="Script" path="res://Porta.cs" id="1_a00ik"]
+[ext_resource type="Texture2D" uid="uid://cn7nruwxgyioe" path="res://assets/portaLab.png" id="2_lc8lt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_liwwd"]
+size = Vector2(12, 14)
+
+[node name="Porta" type="Area2D"]
+script = ExtResource("1_a00ik")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_lc8lt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_liwwd")

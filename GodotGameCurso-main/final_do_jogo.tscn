@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2oqqdq5xnr3f"]
+
+[ext_resource type="Script" path="res://FinalDoJogo.cs" id="1_rlcbj"]
+
+[node name="FinalDoJogo" type="Node2D"]
+script = ExtResource("1_rlcbj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Mensagem" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Pontuacao" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="BotaoReiniciar" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="BotaSair" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0

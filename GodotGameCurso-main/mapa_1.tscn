@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci1fd2n3f422f"]
+
+[ext_resource type="PackedScene" uid="uid://28sp1e5pbqoo" path="res://tile_map_layer.tscn" id="1_gwkx4"]
+[ext_resource type="PackedScene" uid="uid://cr44uacw5jr42" path="res://player.tscn" id="2_ocupa"]
+[ext_resource type="PackedScene" uid="uid://b1crqhg5uq52s" path="res://porta.tscn" id="3_jeor2"]
+[ext_resource type="PackedScene" uid="uid://cysagj2b28ofm" path="res://area.tscn" id="4_0h13g"]
+
+[node name="mapa_1" type="Node2D"]
+
+[node name="TileMapLayer" parent="." instance=ExtResource("1_gwkx4")]
+metadata/_edit_lock_ = true
+
+[node name="Porta" parent="." instance=ExtResource("3_jeor2")]
+position = Vector2(247, 349)
+
+[node name="Player" parent="." instance=ExtResource("2_ocupa")]
+position = Vector2(274, 374)
+
+[node name="Area" parent="." instance=ExtResource("4_0h13g")]
+position = Vector2(247, 356)
+scale = Vector2(0.6, 0.32)

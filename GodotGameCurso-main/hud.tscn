@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://4mf7y5v3dvrv"]
+
+[ext_resource type="Script" path="res://HUD.cs" id="1_fbxrx"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_fbxrx")
+
+[node name="LabelDia" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="LabelMateria" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="LabelPontuacao" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CardDialogo" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LabelDialogo" type="Label" parent="CardDialogo"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

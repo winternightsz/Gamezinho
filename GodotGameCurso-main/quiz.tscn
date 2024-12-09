@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://chxhf7vlg4qcm"]
+
+[ext_resource type="Script" path="res://Quiz.cs" id="1_vesbc"]
+[ext_resource type="Texture2D" uid="uid://qwkbnedw0tje" path="res://assets/pjto_57wv_210811.jpg" id="2_6bmuj"]
+
+[node name="Quiz" type="Node2D"]
+script = ExtResource("1_vesbc")
+
+[node name="Pjto57Wv210811" type="Sprite2D" parent="."]
+position = Vector2(2516, 294)
+scale = Vector2(1.21372, 0.899605)
+texture = ExtResource("2_6bmuj")
+
+[node name="PerguntaLabel" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 323.0
+offset_top = 113.0
+offset_right = 363.0
+offset_bottom = 136.0
+scale = Vector2(5.24678, 3.29977)
+
+[node name="Respostas" type="VBoxContainer" parent="."]
+modulate = Color(0.197553, 1, 0.958447, 1)
+offset_left = 436.0
+offset_top = 301.0
+offset_right = 476.0
+offset_bottom = 341.0
+scale = Vector2(7.88, 6.52)
+
+[node name="Opcao1" type="Button" parent="Respostas"]
+modulate = Color(0.751651, 0.000196566, 0.679706, 1)
+self_modulate = Color(0, 1, 1, 1)
+layout_mode = 2
+
+[node name="Opcao2" type="Button" parent="Respostas"]
+modulate = Color(1, 0, 1, 1)
+layout_mode = 2
+
+[node name="Opcao3" type="Button" parent="Respostas"]
+modulate = Color(1, 0.0426088, 0.990048, 1)
+layout_mode = 2
+
+[node name="BotaoSair" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0

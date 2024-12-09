@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0us5pxd6jlkb"]
+
+[ext_resource type="Script" path="res://MenuInicial.cs" id="1_boyqe"]
+
+[node name="MenuInicial" type="Node2D"]
+script = ExtResource("1_boyqe")
+
+[node name="Background" type="Sprite2D" parent="."]
+
+[node name="Titulo" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Botoes" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BotaoIniciar" type="Button" parent="Botoes"]
+layout_mode = 2
+
+[node name="BotaoSair" type="Button" parent="Botoes"]
+layout_mode = 2
