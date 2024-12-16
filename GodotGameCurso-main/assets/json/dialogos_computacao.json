@@ -1,0 +1,14 @@
+{
+    "dia1": {
+        "npc": {
+            "professor": "Bem-vindo ao mundo da Computação! Vamos aprender sobre Algoritmos.",
+            "aluno": "Estou ansioso para aprender!"
+        }
+    },
+    "dia2": {
+        "npc": {
+            "professor": "Hoje vamos falar sobre Banco de Dados.",
+            "aluno": "Banco de Dados parece complicado, mas estou pronto!"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "dia1": {
+        "npc": {
+            "professor": "Bem-vindo! Vamos aprender sobre História.",
+            "aluno": "História é fascinante!"
+        }
+    },
+    "dia2": {
+        "npc": {
+            "professor": "Hoje vamos falar sobre Matemática.",
+            "aluno": "Matemática é o meu forte!"
+        }
+    }
+}

@@ -131,7 +131,7 @@ sprite_frames = SubResource("SpriteFrames_m5no5")
 animation = &"walk_front"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(6, 6)
+zoom = Vector2(5, 5)
 position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

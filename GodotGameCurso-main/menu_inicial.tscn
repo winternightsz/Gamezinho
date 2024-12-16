@@ -8,14 +8,29 @@ script = ExtResource("1_boyqe")
 [node name="Background" type="Sprite2D" parent="."]
 
 [node name="Titulo" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 47.0
+offset_top = 50.0
+offset_right = 87.0
+offset_bottom = 73.0
+scale = Vector2(10.7604, 4.7041)
+
+[node name="Mensagem" type="Label" parent="."]
+offset_left = 233.0
+offset_top = 190.0
+offset_right = 273.0
+offset_bottom = 213.0
 
 [node name="Botoes" type="VBoxContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 192.0
+offset_top = 228.0
+offset_right = 232.0
+offset_bottom = 268.0
+scale = Vector2(7.4225, 3.6782)
 
-[node name="BotaoIniciar" type="Button" parent="Botoes"]
+[node name="BotaoComputacao" type="Button" parent="Botoes"]
+layout_mode = 2
+
+[node name="BotaoGeneral" type="Button" parent="Botoes"]
 layout_mode = 2
 
 [node name="BotaoSair" type="Button" parent="Botoes"]

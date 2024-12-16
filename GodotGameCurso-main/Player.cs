@@ -6,6 +6,7 @@ public partial class Player : CharacterBody2D
     private Vector2 velocity;
     [Export]
     public AnimatedSprite2D animar;
+    private bool podeMover = false;
     private RayCast2D rayCastInteracao;
 
     public override void _Ready()
@@ -47,6 +48,11 @@ public partial class Player : CharacterBody2D
     public override void _PhysicsProcess(double delta)
     {
         velocity = Velocity;
+        if (!podeMover)
+        {
+            Velocity = Vector2.Zero;
+            return;
+        }
 
         // Obtém a direção do input e aplica o movimento
         Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
@@ -57,28 +63,14 @@ public partial class Player : CharacterBody2D
         //VerificarInteracao();
         MoveAndSlide();
     }
-/*
-    private void VerificarInteracao()
-{
-    if (Input.IsActionJustPressed("ui_accept") && rayCastInteracao.IsColliding())
+    public void PermitirMovimento()
     {
-        var collider = rayCastInteracao.GetCollider();
-
-        if (collider == null)
-        {
-            GD.PrintErr("RayCast colidiu com um objeto inválido.");
-            return;
-        }
-
-        if (collider is Porta porta)
-        {
-            porta.Abrir();
-        }
-        else
-        {
-            GD.Print("Colidiu com algo que não é uma Porta.");
-        }
+        GD.Print("Movimento do jogador permitido.");
+        podeMover = true;
     }
-}
-    */
+
+    public void BloquearMovimento()
+    {
+        podeMover = false;
+    }
 }

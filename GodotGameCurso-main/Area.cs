@@ -4,36 +4,28 @@ using System;
 public partial class Area : Area2D
 {
     [Export]
-    //private int tipo = 1;
-    //private int tipo2 = 1;
-    private bool dentro = false;
+    public string cenaDestino = "res://quiz.tscn";
 
-    public void EntrouArea(Node2D corpo)
+    public override void _Ready()
     {
-        if (corpo is Player) {
-            dentro = true;
-            GetTree().ChangeSceneToFile("res://quiz.tscn");
-        }
-        
+        Connect("body_entered", new Callable(this, nameof(EntrouArea)));
+        Connect("body_exited", new Callable(this, nameof(SaiuArea)));
     }
 
-    public void SaiuArea(Node2D corpo)
+    private void EntrouArea(Node2D corpo)
     {
         if (corpo is Player)
         {
-            dentro = false;
+            GD.Print($"Player entrou na área! Cena de destino: {cenaDestino}");
+            GetTree().ChangeSceneToFile(cenaDestino);
         }
-
-        
     }
-	
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-        //if (dentro)
-        //{
-            
-        //}
-	}
+    private void SaiuArea(Node2D corpo)
+    {
+        if (corpo is Player)
+        {
+            GD.Print("Player saiu da área.");
+        }
+    }
 }

@@ -7,14 +7,15 @@ public partial class FinalDoJogo : Node2D
     private Button botaoReiniciar;
     private Button botaoSair;
 
-    private const int PontosNecessariosParaPassar = 25; // Pontos mínimos para passar de ano
+    private const int PontosNecessariosParaPassar = 4; // Pontos mínimos para passar de ano
 
     public override void _Ready()
     {
-        mensagem = GetNode<Label>("Mensagem");
-        pontuacao = GetNode<Label>("Pontuacao");
-        botaoReiniciar = GetNode<Button>("BotaoReiniciar");
-        botaoSair = GetNode<Button>("BotaoSair");
+        var layout = GetNode<Control>("LayoutFinal");
+        mensagem = layout.GetNode<Label>("Mensagem");
+        pontuacao = layout.GetNode<Label>("Pontuacao");
+        botaoReiniciar = layout.GetNode<Button>("BotaoReiniciar");
+        botaoSair = layout.GetNode<Button>("BotaoSair");
 
         botaoReiniciar.Connect("pressed", new Callable(this, nameof(ReiniciarJogo)));
         botaoSair.Connect("pressed", new Callable(this, nameof(SairDoJogo)));
@@ -44,7 +45,7 @@ public partial class FinalDoJogo : Node2D
 
 private void ReiniciarJogo()
 {
-    GetTree().ChangeSceneToFile("res://CenarioPrincipal.tscn"); // Reinicia o jogo
+    GetTree().ChangeSceneToFile("res://mapa_1.tscn"); // Reinicia o jogo
 }
 
 private void SairDoJogo()

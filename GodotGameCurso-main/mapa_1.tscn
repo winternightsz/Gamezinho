@@ -1,21 +1,38 @@
-[gd_scene load_steps=5 format=3 uid="uid://ci1fd2n3f422f"]
+[gd_scene load_steps=8 format=3 uid="uid://ci1fd2n3f422f"]
 
+[ext_resource type="Script" path="res://Mapa1.cs" id="1_5cydw"]
 [ext_resource type="PackedScene" uid="uid://28sp1e5pbqoo" path="res://tile_map_layer.tscn" id="1_gwkx4"]
 [ext_resource type="PackedScene" uid="uid://cr44uacw5jr42" path="res://player.tscn" id="2_ocupa"]
 [ext_resource type="PackedScene" uid="uid://b1crqhg5uq52s" path="res://porta.tscn" id="3_jeor2"]
 [ext_resource type="PackedScene" uid="uid://cysagj2b28ofm" path="res://area.tscn" id="4_0h13g"]
+[ext_resource type="PackedScene" uid="uid://4mf7y5v3dvrv" path="res://hud.tscn" id="5_6eqvn"]
+[ext_resource type="PackedScene" uid="uid://deovd12xvuv1d" path="res://textbox.tscn" id="6_kvh11"]
 
 [node name="mapa_1" type="Node2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_5cydw")
 
 [node name="TileMapLayer" parent="." instance=ExtResource("1_gwkx4")]
 metadata/_edit_lock_ = true
 
 [node name="Porta" parent="." instance=ExtResource("3_jeor2")]
+visible = false
 position = Vector2(247, 349)
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_ocupa")]
-position = Vector2(274, 374)
+position = Vector2(312, 367)
 
 [node name="Area" parent="." instance=ExtResource("4_0h13g")]
-position = Vector2(247, 356)
+position = Vector2(232, 367)
 scale = Vector2(0.6, 0.32)
+
+[node name="Area2" parent="." instance=ExtResource("4_0h13g")]
+position = Vector2(353, 412)
+cenaDestino = "res://final_do_jogo.tscn"
+
+[node name="Textbox" parent="." instance=ExtResource("6_kvh11")]
+visible = false
+
+[node name="HUD" parent="." instance=ExtResource("5_6eqvn")]
+visible = false

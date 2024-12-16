@@ -1,0 +1,22 @@
+{
+    "dia1": [
+        {
+            "pergunta": "Quem descobriu o Brasil?",
+            "respostas": [
+                "Cristóvão Colombo",
+                "Pedro Álvares Cabral",
+                "Américo Vespúcio"
+            ],
+            "correta": 1
+        },
+        {
+            "pergunta": "Qual é o maior planeta do sistema solar?",
+            "respostas": [
+                "Terra",
+                "Júpiter",
+                "Marte"
+            ],
+            "correta": 1
+        }
+    ]
+}

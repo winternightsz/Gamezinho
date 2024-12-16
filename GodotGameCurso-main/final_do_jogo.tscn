@@ -1,24 +1,82 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2oqqdq5xnr3f"]
+[gd_scene load_steps=3 format=3 uid="uid://c2oqqdq5xnr3f"]
 
 [ext_resource type="Script" path="res://FinalDoJogo.cs" id="1_rlcbj"]
+[ext_resource type="FontFile" uid="uid://h272b082lv34" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_g7ofv"]
 
 [node name="FinalDoJogo" type="Node2D"]
 script = ExtResource("1_rlcbj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
-[node name="Mensagem" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="LayoutFinal" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
 
-[node name="Pontuacao" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Mensagem" type="Label" parent="LayoutFinal"]
+custom_minimum_size = Vector2(500, 40)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.089
+anchor_top = 0.106
+anchor_right = 0.089
+anchor_bottom = 0.106
+offset_left = 23.04
+offset_top = 1.84
+offset_right = 523.04
+offset_bottom = 42.84
+theme_override_fonts/font = ExtResource("2_g7ofv")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="BotaoReiniciar" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Pontuacao" type="Label" parent="LayoutFinal"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.331
+anchor_top = 0.249
+anchor_right = 0.331
+anchor_bottom = 0.249
+offset_left = -11.84
+offset_top = -1.64
+offset_right = 188.16
+offset_bottom = 76.36
+scale = Vector2(0.8, 0.8)
+theme_override_fonts/font = ExtResource("2_g7ofv")
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="BotaSair" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="BotaoReiniciar" type="Button" parent="LayoutFinal"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.162625
+anchor_top = 1.62211
+anchor_right = 0.325125
+anchor_bottom = 1.63322
+offset_left = -40.08
+offset_top = -295.96
+offset_right = 62.92
+offset_bottom = -259.96
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_g7ofv")
+text = "Reiniciar"
+metadata/_edit_use_anchors_ = true
+
+[node name="BotaoSair" type="Button" parent="LayoutFinal"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.684
+anchor_top = 0.781
+anchor_right = 0.684
+anchor_bottom = 0.783
+offset_left = -53.76
+offset_top = 6.84
+offset_right = 146.24
+offset_bottom = 46.12
+theme_override_fonts/font = ExtResource("2_g7ofv")
+text = "Sair"

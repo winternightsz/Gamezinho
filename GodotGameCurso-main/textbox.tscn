@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://deovd12xvuv1d"]
+
+[ext_resource type="Script" path="res://Textbox.cs" id="1_4eety"]
+[ext_resource type="Texture2D" uid="uid://ppk22qn0xjlv" path="res://assets/CardFalas.png" id="2_xps42"]
+
+[node name="Textbox" type="CanvasLayer"]
+script = ExtResource("1_4eety")
+
+[node name="LayoutTextbox" type="Control" parent="."]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1.0
+
+[node name="Background" type="TextureRect" parent="LayoutTextbox"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.111
+anchor_top = 0.691
+anchor_right = 0.122
+anchor_bottom = 0.978
+offset_left = 6.96001
+offset_top = -0.068985
+offset_right = 646.52
+offset_bottom = 25.802
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_xps42")
+
+[node name="Texto" type="Label" parent="LayoutTextbox"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.133
+anchor_top = 0.708
+anchor_right = 0.195
+anchor_bottom = 0.822
+offset_left = -0.120003
+offset_top = -0.171997
+offset_right = 0.199997
+offset_bottom = -0.0980225
+vertical_alignment = 1

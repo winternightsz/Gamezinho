@@ -1,0 +1,33 @@
+{
+    "dia1": [
+        {
+            "pergunta": "Qual é a função de um algoritmo?",
+            "respostas": [
+                "Executar tarefas específicas",
+                "Criar gráficos",
+                "Aumentar a velocidade do computador"
+            ],
+            "correta": 0
+        },
+        {
+            "pergunta": "O que é um array?",
+            "respostas": [
+                "Um conjunto de valores armazenados em sequência",
+                "Uma função matemática",
+                "Uma tabela de dados"
+            ],
+            "correta": 0
+        }
+    ],
+    "dia2": [
+        {
+            "pergunta": "O que é um banco de dados relacional?",
+            "respostas": [
+                "Um conjunto de tabelas relacionadas",
+                "Um tipo de memória RAM",
+                "Uma ferramenta de análise de gráficos"
+            ],
+            "correta": 0
+        }
+    ]
+}
